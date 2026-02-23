@@ -1,73 +1,180 @@
-# React + TypeScript + Vite
+🧑‍💼 Job Portal Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A role-based Job Portal built using React, TypeScript, Redux Toolkit, TanStack Query, Material UI, and JSON Server.
 
-Currently, two official plugins are available:
+This application allows Admins to create and manage job postings and Candidates to view and apply for jobs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 Repository:
+https://github.com/solanki-yogesh/job-portal-app
 
-## React Compiler
+🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚛️ React (Vite)
 
-## Expanding the ESLint configuration
+📘 TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🗃️ Redux Toolkit (Authentication State Management)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🔄 TanStack Query (Server State Management)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🎨 Material UI (UI Components)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🗄️ JSON Server (Mock Backend API)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+✨ Features
+🔐 Authentication
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Role-based login (Admin / Candidate)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Protected routes
+
+Logout functionality
+
+Redux-managed authentication state
+
+Password not stored in Redux
+
+👨‍💼 Admin Panel
+
+Create new job postings
+
+View list of created jobs
+
+View applicants per job
+
+Applicants dialog displays:
+
+Candidate Name
+
+Candidate Email
+
+Applied Date
+
+Form validation
+
+Snackbar notifications
+
+👩‍💻 Candidate Panel
+
+View all available jobs
+
+Apply for a job
+
+Cannot apply twice for the same job
+
+Cannot apply if job is expired
+
+Disabled apply button if:
+
+Already applied
+
+Job expired
+
+Status indicators (Expired / Already Applied)
+
+Loading states for async operations
+
+🧠 Best Practices Implemented
+
+Strict TypeScript typing (no any)
+
+Separate database models and auth models
+
+No optional id in database models
+
+No inline object types
+
+Proper query invalidation after mutations
+
+Type-only imports where required
+
+Clean folder structure
+
+Reusable API layer
+
+Snackbar feedback system
+
+Loading indicators
+
+🧪 Test Credentials
+👨‍💼 Admin
+
+Email: admin@mail.com
+
+Password: 123456
+
+👩‍💻 Candidate
+
+Email: candidate@mail.com
+
+Password: 123456
+
+🛠 Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/solanki-yogesh/job-portal-app.git
+cd job-portal-app
+2️⃣ Install Dependencies
+npm install
+3️⃣ Start Frontend (Vite)
+npm run dev
+
+Frontend runs at:
+
+http://localhost:5173
+
+4️⃣ Start JSON Server
+npx json-server --watch db.json --port 3001
+
+Backend runs at:
+
+http://localhost:3001
+
+🌐 API Endpoints (JSON Server)
+
+GET /users
+
+GET /jobs
+
+POST /jobs
+
+GET /applications
+
+POST /applications
+
+📁 Project Structure
+src/
+ ├── app/
+ │    ├── store.ts
+ │    ├── hooks.ts
+ │
+ ├── features/
+ │    ├── auth/
+ │    ├── jobs/
+ │    ├── applications/
+ │
+ ├── routes/
+ ├── types/
+ ├── components/
+ └── main.tsx
+📌 Future Improvements
+
+Pagination for job listings
+
+Search & filtering
+
+Deployment (Vercel + Render)
+
+Unit testing (Jest / React Testing Library)
+
+Backend integration (Node.js / Express)
+
+Dark mode support
+
+👤 Author
+
+Yogesh Solanki
+GitHub: https://github.com/solanki-yogesh
+
+📄 License
+
+This project was built for learning and assignment purposes.
