@@ -34,6 +34,13 @@
       "email": "testing@gmail.com",
       "password": "admin123",
       "role": "candidate"
+    },
+    {
+      "id": "6db0",
+      "name": "candidate",
+      "email": "candidate@mail.com",
+      "password": "admin123",
+      "role": "candidate"
     }
   ],
   "jobs": [
@@ -74,6 +81,12 @@
       "jobId": "8d14",
       "userId": "f9f0",
       "appliedDate": "2026-02-23T12:09:30.065Z"
+    },
+    {
+      "id": "2be2",
+      "jobId": "b72c",
+      "userId": "6db0",
+      "appliedDate": "2026-02-23T12:29:07.222Z"
     }
   ]
 }
