@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": "bf86",
+      "name": "test",
+      "email": "admin@test.com",
+      "password": "admin123",
+      "role": "candidate"
+    },
+    {
+      "id": "a529",
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "test@1234",
+      "role": "candidate"
+    },
+    {
+      "id": "1578",
+      "name": "Test",
+      "email": "test@gmail.com",
+      "password": "test@1234",
+      "role": "candidate"
+    },
+    {
+      "id": "6d87",
+      "name": "test12",
+      "email": "test12@test.com",
+      "password": "admin123",
+      "role": "candidate"
+    },
+    {
+      "id": "f9f0",
+      "name": "new",
+      "email": "testing@gmail.com",
+      "password": "admin123",
+      "role": "candidate"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "8d14",
+      "title": "Test",
+      "description": "test",
+      "daysRemaining": 4
+    },
+    {
+      "id": "b72c",
+      "title": "new ",
+      "description": "test",
+      "daysRemaining": 2
+    }
+  ],
+  "applications": [
+    {
+      "id": "01dd",
+      "jobId": "8d14",
+      "userId": "a529",
+      "appliedDate": "2026-02-23T12:05:01.868Z"
+    },
+    {
+      "id": "e0e5",
+      "jobId": "8d14",
+      "userId": "6d87",
+      "appliedDate": "2026-02-23T12:08:20.387Z"
+    },
+    {
+      "id": "7b2e",
+      "jobId": "b72c",
+      "userId": "f9f0",
+      "appliedDate": "2026-02-23T12:09:26.189Z"
+    },
+    {
+      "id": "60a3",
+      "jobId": "8d14",
+      "userId": "f9f0",
+      "appliedDate": "2026-02-23T12:09:30.065Z"
+    }
+  ]
+}
